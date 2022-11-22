@@ -1,15 +1,15 @@
 import net from 'net'
-import { help,  isValidUserName, getPort, returnClients } from './server-funcktions.js'
+import { help,  isValidUserName, getPort, returnClients } from './server-functions.js'
 
 let onlineClients = [];
 let clientsSockets = [];
 let port = 3000;
 
 const server = net.createServer( function (client) {
-  process.stdout.write('The new client successfully connected\n');
+  process.stdout.write('New client connected successfully \n');
 
   client.write('Server >>>> Welcome! \n');
-  client.write('Server >>>> Please type your username \n');
+  client.write('Server >>>> Please input your username \n');
 
   client.on("data", (data) => {
     

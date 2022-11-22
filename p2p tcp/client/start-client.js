@@ -27,7 +27,8 @@ import { myData } from './client.js';
     });
 
     socket.on('close', (info) => {
-      console.log('one client left chat online clients is');
+      console.log('one of the clients left the chat');
+      console.log('online clients are');
       myData.mySockets[0].server.write('/get/clients');
     });
 
