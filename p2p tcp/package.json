@@ -1,0 +1,16 @@
+{
+  "name": "p2p-tcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "commands.js",
+  "type": "module",
+  "scripts": {
+    "server": "node server/server.js",
+    "client": "node client/client.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^9.0.0"
+  }
+}
