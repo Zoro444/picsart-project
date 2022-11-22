@@ -21,11 +21,11 @@ const server = net.createServer( function (client) {
     if (client.userName !== undefined) {
       setTimeout(() => {
         getPort(client, client.clientPort, client.userName);
-      },5);
+      },10);
 
       setTimeout(() => {
         returnClients(client, onlineClients, clientsSockets)
-      },5);
+      },10);
 
       help(client);
       client.clientPort = ++port;

@@ -30,7 +30,7 @@ function connectToServer(port, name) {
         }
           
         console.log(`to send message to server write ->server`);
-        console.log(`to send message to client write ->"clientName"`);
+        console.log(`to send message to client write ->clientName`);
         return;
       }
 
@@ -43,7 +43,7 @@ function connectToServer(port, name) {
 
       console.log(input);
 
-    } catch (err) {
+    } catch (err) {console.log(err);
       let input = data.toString().trim();
       if (!input.startsWith('~~') && myData.myUserName !== undefined){
         serverConnection.write(`~~${myData.myUserName} received~~`);
