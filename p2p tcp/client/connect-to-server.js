@@ -29,8 +29,8 @@ function connectToServer(port, name) {
           command(`connect ${input.onlineClients[i].clientName}`, myData);
         }
           
-        console.log(`to send sms to server write ->server`);
-        console.log(`to send sms to client write ->clientName`);
+        console.log(`to send message to server write ->server`);
+        console.log(`to send message to client write ->clientName`);
         return;
       }
 
@@ -57,7 +57,7 @@ function connectToServer(port, name) {
   });
 
   serverConnection.on('close', (info) => {
-    console.log('one client left chat online clients is');
+    console.log('one of the clients left the chat\nonline clients are\n');
     myData.mySockets[0].server.write('/clients')
   });
 
