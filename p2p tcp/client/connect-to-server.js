@@ -43,7 +43,7 @@ function connectToServer(port, name) {
 
       console.log(input);
 
-    } catch (err) {console.log(err);
+    } catch (err) {
       let input = data.toString().trim();
       if (!input.startsWith('~~') && myData.myUserName !== undefined){
         serverConnection.write(`~~${myData.myUserName} received~~`);
@@ -57,8 +57,7 @@ function connectToServer(port, name) {
   });
 
   serverConnection.on('close', (info) => {
-    console.log('one of the clients left the chat');
-    console.log('online clients are');
+    console.log('one of the clients left the chat\nonline clients are\n');
     myData.mySockets[0].server.write('/clients')
   });
 
